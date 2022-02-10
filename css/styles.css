@@ -1,1 +1,42 @@
 /* developer styles go here */
+body{
+    font-family: sans-serif;
+}
+
+header{
+    max-width: 58rem;
+    margin: 0 auto;
+}
+
+ul.menu{
+    background-color: #000;
+    color: #fff;
+}
+
+ul.menu a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    /* inline elements will not take top and bottom padding and margins -- so make them block level will also let the clickable area be larger */
+    display: block;
+}
+
+/* change from a stacking nav to a horizontal nav on larger Viewports  */
+@media only screen and (min-width: 30rem){
+    ul.menu{
+        display: flex;
+        /* if overflow content add wrap  */
+        flex-wrap: wrap;
+        /* justify-content: space-between;  */
+        
+    }
+    ul.menu li{
+        /* flexgrow and flex shrink properties go onthe the flex items  */
+        flex-grow: 1;
+        /* flex-shrink: 1;  */
+        flex-basis: auto;
+        /* then add text align to center the text so the nav looks symetrical  */
+        text-align: center;
+    }
+}
