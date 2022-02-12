@@ -4,7 +4,7 @@ body{
 }
 
 header{
-    max-width: 58rem;
+    max-width: 60rem;
     margin: 0 auto;
 }
 
@@ -20,6 +20,27 @@ ul.menu a{
     padding: 1rem;
     /* inline elements will not take top and bottom padding and margins -- so make them block level will also let the clickable area be larger */
     display: block;
+}
+
+ul.menu a:hover,
+ul.menu a:active{
+    color: #39ff14;
+}
+
+svg path,
+svg rect,
+svg polygon{
+    fill: #f5f5f5;
+}
+
+ul.menu a:hover path,
+ul.menu a:hover rect,
+ul.menu a:hover polygon{
+    fill: #39ff14;
+}
+
+svg{
+    width: 1.25rem;
 }
 
 /* change from a stacking nav to a horizontal nav on larger Viewports  */
